@@ -1,0 +1,122 @@
+messages:
+  - role: system
+    content: |2-
+       Each example/input/question is a Logic Grid Puzzle, also known as a Zebra Puzzle. In each puzzle, we are given N houses (numbered 1 to N from left to right) and M features for each house. There are N distinct values for each feature, and each house must have a unique value for each feature. Given a list of clues, one should be able to deduce a unique correct assignment of values. The logic grid puzzle is a typical Constraint Satisfaction Problem (CSP) and is often used to test humans' logical reasoning abilities in exams such as the Law School Admission Test (LSAT).
+
+      You always solve problem step by step
+      start answering with `## Reasoning steps:` and end with 
+
+      ## Final answer:
+      ```json
+
+      ````
+  - role: user
+    content: >-
+      There are 2 houses, numbered 1 to 2 from left to right.
+
+      Each house is occupied by a different person.
+
+      Each house has a unique attribute for each of the following
+      characteristics:
+
+      - Each person has a unique name: **Arnold, Eric**
+
+      - People own unique car models: **ford f150, tesla model 3**
+
+      - The people keep unique animals: **cat, horse**
+
+
+      **Clues**:
+
+      1. Eric is directly left of the person who owns a Tesla Model 3.
+
+      2. The person who keeps horses is in the first house.
+  - role: assistant
+    content: >-
+      ## Reasoning steps:
+
+
+      From Clue 1, we know that Eric is to the left of someone, so he must be
+      the owner of House 1 because House 2 is the rightmost house.
+
+      Additionally, we know that the person in House 2 must be Arnold, and he
+      owns a Tesla Model 3. Thus, Eric owns a Ford F150.
+
+      From Clue 2, we know that Eric keeps horses in House 1, which means the
+      other house must keep cats. Finally, we arrive at the unique solution to
+      this puzzle.
+
+      The solution is presented in table format:
+
+
+      ## Final answer:
+
+
+      ```json
+
+      {
+         "header":[
+            "Houses",
+            "Name",
+            "CarModel",
+            "Animal"
+         ],
+         "rows":[
+            [
+               "1",
+               "Eric",
+               "ford f150",
+               "horse"
+            ],
+            [
+               "2",
+               "Arnold",
+               "tesla model 3",
+               "cat"
+            ]
+         ]
+      }
+
+      ```
+  - role: user
+    content: >-
+      Question:
+
+      There are 3 houses, numbered 1 to 3 from left to right, as seen from
+      across the street. Each house is occupied by a different person. Each
+      house has a unique attribute for each of the following characteristics:
+
+      - Each person has a unique name: `Peter`, `Eric`, `Arnold`
+
+      - Each person has a favorite color: `red`, `white`, `yellow`
+
+      - Each mother is accompanied by their child: `Fred`, `Meredith`, `Bella`
+
+
+      ## Clues:
+
+      1. Arnold is the person whose favorite color is red.
+
+      2. The person's child is named Fred is somewhere to the left of Eric.
+
+      3. The person whose favorite color is red is in the second house.
+
+      4. The person's child is named Bella is in the first house.
+
+      5. The person who loves white is the person's child is named Meredith.
+
+
+      ## Headers
+
+      "header": [
+
+      "House",
+
+      "Name",
+
+      "Color",
+
+      "Children"
+
+      ]
+model: openai/gpt-4o
