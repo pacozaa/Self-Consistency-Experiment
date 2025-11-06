@@ -107,9 +107,9 @@ These templates demonstrate:
 
 The notebooks work with various models available through GitHub Models:
 - GPT-4 variants: `openai/gpt-4o`, `openai/gpt-4.1`
-- Microsoft Phi: `phi-4`
+- Microsoft Phi: `phi-4` (may also be referenced as `microsoft/phi-4`)
 
-Note: Model identifiers should match the GitHub Models API naming conventions.
+Note: Model identifiers should match the GitHub Models API naming conventions. Some models may accept shorthand names.
 
 ## References
 
