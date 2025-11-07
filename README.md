@@ -34,6 +34,8 @@ Implements a dynamic few-shot learning approach with iteratively generated "chea
 - Uses previously solved examples to improve performance
 - Demonstrates adaptive prompting strategies
 
+This technique is based on the paper: "Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory" by Suzgun et al.
+
 ## Prerequisites
 
 - Python 3.7+
@@ -114,6 +116,7 @@ Note: Model identifiers should match the GitHub Models API naming conventions. S
 ## References
 
 - **Self-Consistency Paper:** Wang et al. "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
+- **Dynamic Cheatsheet Paper:** Mirac Suzgun, Mert Yuksekgonul, Federico Bianchi, Dan Jurafsky, James Zou. "Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory" - [arXiv:2504.07952v1](https://arxiv.org/abs/2504.07952v1#S4)
 - **ZebraLogicBench:** A benchmark for evaluating logical reasoning in language models
 - **GitHub Models:** [Prototyping with AI Models](https://docs.github.com/en/github-models)
 
