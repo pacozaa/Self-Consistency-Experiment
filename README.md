@@ -34,6 +34,8 @@ Implements a dynamic few-shot learning approach with iteratively generated "chea
 - Uses previously solved examples to improve performance
 - Demonstrates adaptive prompting strategies
 
+This technique is based on the paper: "Dynamic Cheatsheet: Test-Time Learning with Adaptive Memory" by Suzgun et al.
+
 ## Prerequisites
 
 - Python 3.7+
